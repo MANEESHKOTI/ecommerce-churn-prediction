@@ -1,0 +1,64 @@
+{
+    "student_info": {
+        "name": "Maneesh Koti",
+        "email": "maneesh.koti@example.com",
+        "student_id": "DS2025MK",
+        "submission_date": "2025-12-25"
+    },
+    "repository": {
+        "github_url": "https://github.com/maneesh-koti/ecommerce-churn-prediction",
+        "commit_hash": "latest"
+    },
+    "deployment": {
+        "live_url": "https://share.streamlit.io/maneesh-koti/ecommerce-churn-prediction",
+        "platform": "Streamlit Cloud",
+        "deployment_date": "2025-12-25",
+        "status": "active"
+    },
+    "dataset": {
+        "source": "UCI Machine Learning Repository",
+        "url": "http://archive.ics.uci.edu/ml/datasets/Online+Retail+II",
+        "original_rows": 541909,
+        "cleaned_rows": 350000,
+        "final_customers": 4200
+    },
+    "models": {
+        "models_trained": [
+            "Logistic Regression",
+            "Decision Tree",
+            "Random Forest",
+            "XGBoost",
+            "Neural Network"
+        ],
+        "best_model": "Neural Network",
+        "best_model_metrics": {
+            "accuracy": 0.81,
+            "precision": 0.74,
+            "recall": 0.69,
+            "f1_score": 0.71,
+            "roc_auc": 0.7932
+        }
+    },
+    "completion_status": {
+        "phase1_business_understanding": true,
+        "phase2_data_acquisition": true,
+        "phase3_data_cleaning": true,
+        "phase4_feature_engineering": true,
+        "phase5_eda": true,
+        "phase6_modeling": true,
+        "phase7_evaluation": true,
+        "phase8_deployment": true,
+        "phase9_documentation": true,
+        "phase10_code_quality": true
+    },
+    "key_learnings": [
+        "Feature engineering (RFM) was more impactful than model selection.",
+        "Handling data leakage by strictly separating training/observation windows was critical.",
+        "Neural Networks required significant preprocessing (scaling) compared to Tree models."
+    ],
+    "challenges_faced": [
+        "Aligning feature columns between training and inference for XGBoost.",
+        "Dealing with class imbalance (churn rate ~20%).",
+        "Managing Docker environment dependencies."
+    ]
+}

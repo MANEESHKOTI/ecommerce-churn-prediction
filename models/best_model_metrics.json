@@ -1,0 +1,9 @@
+{
+    "Model": "Neural Network",
+    "Accuracy": 0.730909090909091,
+    "Precision": 0.7105263157894737,
+    "Recall": 0.7269230769230769,
+    "F1-Score": 0.7186311787072244,
+    "ROC-AUC": 0.7931830238726791,
+    "Training Time": 0.595
+}
