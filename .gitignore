@@ -1,0 +1,112 @@
+# =======================================================
+# 1. STANDARD PYTHON & IDE IGNORES (Junk you don't want)
+# =======================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+env/
+.venv/
+.env
+
+# Jupyter Notebook checkpoints (VERY IMPORTANT to ignore)
+.ipynb_checkpoints/
+
+# IDE / Editor settings
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Logs
+*.log
+
+# =======================================================
+# 2. DATA & MODELS (Ignore large files/folders)
+# =======================================================
+# Ignore the models folder but keep the structure if needed
+models/*
+# You can add !models/.gitkeep if you want to push the empty folder
+
+# Ignore the data folder generally...
+data/
+
+# ...BUT keep specific subdirectories so we can whitelist files inside them
+!data/raw/
+!data/processed/
+
+# Ignore contents of raw and processed by default (to catch large CSVs)
+data/raw/*
+data/processed/*
+
+# =======================================================
+# 3. MANDATORY DELIVERABLES (Explicit Whitelist)
+# =======================================================
+# These rules override the ignores above. 
+# They ensure that even if you mess up a pattern, these specific files get pushed.
+
+# --- Standardized JSON Artifacts (CRITICAL) ---
+!data/raw/data_quality_summary.json
+!data/processed/cleaning_statistics.json
+!data/processed/validation_report.json
+!data/processed/feature_info.json
+
+# --- Config & Environment ---
+!Dockerfile
+!docker-compose.yml
+!requirements.txt
+!.env.example
+# Note: .env is ignored above, but .env.example is forcibly tracked here
+
+# --- Submission Metadata ---
+!submission.json
+
+# --- Core Project Structure ---
+!src/
+!src/*.py
+# Explicitly tracking the required scripts just in case
+!src/01_data_acquisition.py
+!src/02_data_cleaning.py
+!src/03_feature_engineering.py
+
+!notebooks/
+!notebooks/*.ipynb
+# Explicitly tracking the required notebooks
+!notebooks/01_initial_data_exploration.ipynb
+!notebooks/02_data_validation.ipynb
+
+!docs/
+!docs/*.md
+# Explicitly tracking the documentation
+!docs/01_business_problem.md
+!docs/02_project_scope.md
+!docs/03_technical_approach.md
+!docs/04_success_criteria.md
+!docs/05_data_cleaning_strategy.md
+!docs/06_data_dictionary.md
+!docs/07_data_cleaning_report.md
+!docs/08_churn_definition.md
+
+# --- App & Deployment ---
+!app/
+!README.md
