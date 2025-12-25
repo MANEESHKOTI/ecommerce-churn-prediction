@@ -48,9 +48,8 @@ env/
 models/*
 # You can add !models/.gitkeep if you want to push the empty folder
 
-# Ignore the data folder generally...
-data/
-
+# Ignore data contents generally...
+data/*
 # ...BUT keep specific subdirectories so we can whitelist files inside them
 !data/raw/
 !data/processed/
