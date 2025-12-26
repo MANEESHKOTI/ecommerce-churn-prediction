@@ -3,9 +3,12 @@ import numpy as np
 import os
 import json
 import sys
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)
 
+# Construct path relative to project root
+RAW_DATA_PATH = os.path.join(project_root, "data", "raw", "online_retail_II.xlsx")
 # --- CONFIGURATION ---
-RAW_DATA_PATH = '/Users/maneeshkoti/Documents/ecommerce-churn-prediction/data/raw/online_retail_II.xlsx'
 PROCESSED_DIR = 'data/processed'
 OUTPUT_FILE = os.path.join(PROCESSED_DIR, 'cleaned_transactions.csv')
 STATS_FILE = os.path.join(PROCESSED_DIR, 'cleaning_statistics.json')

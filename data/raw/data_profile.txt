@@ -1,7 +1,7 @@
 DATASET PROFILE
 ================
 
-Source: /Users/maneeshkoti/Documents/ecommerce-churn-prediction/data/raw/online_retail_II.xlsx
+Source: /app/data/raw/online_retail_II.xlsx
 Total Rows: 1067371
 Total Columns: 8
 Column Names: ['Invoice', 'StockCode', 'Description', 'Quantity', 'InvoiceDate', 'Price', 'Customer ID', 'Country']
