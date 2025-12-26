@@ -6,11 +6,11 @@
         "submission_date": "2025-12-25"
     },
     "repository": {
-        "github_url": "https://github.com/maneesh-koti/ecommerce-churn-prediction",
+        "github_url": "https://github.com/MANEESHKOTI/ecommerce-churn-prediction",
         "commit_hash": "latest"
     },
     "deployment": {
-        "live_url": "https://share.streamlit.io/maneesh-koti/ecommerce-churn-prediction",
+        "live_url": "https://share.streamlit.io/MANEESHKOTI/ecommerce-churn-prediction",
         "platform": "Streamlit Cloud",
         "deployment_date": "2025-12-25",
         "status": "active"
