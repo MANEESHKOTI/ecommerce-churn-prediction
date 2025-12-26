@@ -1,28 +1,54 @@
-# E-Commerce Customer Churn Prediction
+# 🛍️ E-Commerce Customer Churn Prediction AI
 
-## Project Overview
-This project is an end-to-end machine learning solution designed to predict customer churn for an e-commerce platform. Using historical transactional data, we built a pipeline that transforms raw logs into customer-level insights, engineering features based on RFM (Recency, Frequency, Monetary) analysis. The final model identifies customers at risk of leaving, enabling targeted retention campaigns.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ecommerce-churn-predictiongit-qr4xwis3jph4rmfas48jdu.streamlit.app/)
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED)
+![Model](https://img.shields.io/badge/Champion_Model-XGBoost-orange)
 
-## Business Problem
+An end-to-end machine learning solution designed to predict customer churn for an e-commerce platform. This application transforms raw transaction logs into actionable insights, identifying at-risk customers to enable targeted retention campaigns.
+
+🔴 **Live Demo:** [Click here to view the App](https://ecommerce-churn-predictiongit-qr4xwis3jph4rmfas48jdu.streamlit.app/)
+
+---
+
+## 📖 Project Overview
+
+### Business Problem
 **Goal:** Predict customers who will not make a purchase in the next 90 days.
-* **Context:** Customer acquisition costs are 5-25x higher than retention.
-* **Impact:** Reducing churn by 15-20% can significantly increase customer lifetime value (LTV).
+* **Context:** Customer acquisition costs are **5-25x higher** than retention.
+* **Impact:** Reducing churn by **15-20%** can significantly increase customer lifetime value (LTV).
 * **Success Metric:** ROC-AUC > 0.75 on the test set.
 
-## Dataset
-* **Source:** UCI Machine Learning Repository (Online Retail II).
-* **Size:** ~541,909 rows (Raw), ~350,000 rows (Cleaned).
-* **Period:** Dec 2009 - Dec 2011.
+### Methodology & Results
+1. **Data Cleaning:** Handled missing values, removed cancellations, and filtered outliers.
+2. **Feature Engineering:** Created 30+ features including RFM (Recency, Frequency, Monetary) scores and purchase velocity.
+3. **Model Selection:** Evaluated Logistic Regression, Decision Trees, Random Forest, and XGBoost.
+4. **Final Model:** **XGBoost Classifier** achieved the highest performance with an **ROC-AUC of 0.7812**.
 
-## Methodology
-1.  **Data Cleaning:** Removed missing CustomerIDs, cancellations, and outliers (IQR).
-2.  **Feature Engineering:** Created 30+ features including RFM scores, purchase velocity, and seasonality.
-3.  **Modeling:** Trained 5 algorithms (LogReg, Decision Tree, Random Forest, XGBoost, Neural Network).
-4.  **Final Model:** **Neural Network (MLP)** selected for highest ROC-AUC (0.7932).
+---
 
-## Installation & Usage
+## 🚀 Key Features
 
-### 1. Clone Repository
-```bash
-git clone [https://github.com/MANEESHKOTI/ecommerce-churn-prediction.git](https://github.com/MANEESHKOTI/ecommerce-churn-prediction.git)
+* **🔮 Single Prediction:** Enter customer metrics manually to get an instant risk assessment.
+* **📊 Performance Dashboard:** Interactive views of Confusion Matrices and Feature Importance.
+* **📉 EDA Insights:** Visualize monthly revenue trends and top-selling products.
+
+---
+
+# --- OPTION A: Run with Docker (Recommended) ---
+# 1. Build the image (includes openpyxl & other dependencies)
+docker-compose build
+
+# 2. Run the container (Access at http://localhost:8501)
+docker-compose up -d 
+
+# --- OPTION B: Run Locally (Python) ---
+# 1. Clone the repository
+git clone https://github.com/MANEESHKOTI/ecommerce-churn-prediction.git
 cd ecommerce-churn-prediction
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Run the application
+streamlit run app/streamlit_app.py

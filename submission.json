@@ -2,17 +2,17 @@
     "student_info": {
         "name": "Maneesh Koti",
         "email": "maneesh.koti@example.com",
-        "student_id": "DS2025MK",
-        "submission_date": "2025-12-25"
+        "student_id": "23A91A4409",
+        "submission_date": "2025-12-26"
     },
     "repository": {
         "github_url": "https://github.com/MANEESHKOTI/ecommerce-churn-prediction",
         "commit_hash": "latest"
     },
     "deployment": {
-        "live_url": "https://share.streamlit.io/MANEESHKOTI/ecommerce-churn-prediction",
+        "live_url": "https://ecommerce-churn-predictiongit-qr4xwis3jph4rmfas48jdu.streamlit.app/",
         "platform": "Streamlit Cloud",
-        "deployment_date": "2025-12-25",
+        "deployment_date": "2025-12-26",
         "status": "active"
     },
     "dataset": {
