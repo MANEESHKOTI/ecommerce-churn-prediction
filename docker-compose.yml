@@ -1,10 +1,9 @@
+version: '3.8'
 
 services:
   data-science-app:
     build: .
     container_name: ecommerce-churn-prediction
-    ports:
-      - "8501:8501"
     volumes:
       - ./data:/app/data
       - ./models:/app/models
@@ -12,7 +11,9 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
     working_dir: /app
-    # Health check [cite: 212]
+    ports:
+      - "8501:8501"  # <--- ADDED THIS so you can see the app in browser
+    # Health check (from your instructions)
     healthcheck:
       test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
       interval: 30s
