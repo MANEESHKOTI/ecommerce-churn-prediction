@@ -24,5 +24,5 @@ This project is an end-to-end machine learning solution designed to predict cust
 
 ### 1. Clone Repository
 ```bash
-git clone [https://github.com/YOUR_USERNAME/ecommerce-churn-prediction.git](https://github.com/YOUR_USERNAME/ecommerce-churn-prediction.git)
+git clone [https://github.com/MANEESHKOTI/ecommerce-churn-prediction.git](https://github.com/MANEESHKOTI/ecommerce-churn-prediction.git)
 cd ecommerce-churn-prediction
