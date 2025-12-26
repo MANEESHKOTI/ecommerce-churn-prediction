@@ -1,0 +1,8 @@
+{
+    "total_rows": 779425,
+    "total_columns": 9,
+    "unique_customers": 5878,
+    "unique_products": 4631,
+    "total_revenue": 17374804.268,
+    "validation_passed": true
+}
