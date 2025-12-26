@@ -3,7 +3,16 @@ import os
 import sys
 
 # Define the exact path you confirmed
-RAW_DATA_PATH = '/Users/maneeshkoti/Documents/ecommerce-churn-prediction/data/raw/online_retail_II.xlsx'
+# ✅ Use this
+
+# Get the project root (assuming script is in src/)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)
+
+# Construct path relative to project root
+RAW_DATA_PATH = os.path.join(project_root, "data", "raw", "online_retail_II.xlsx")
+
+df = pd.read_excel(RAW_DATA_PATH)
 PROFILE_OUTPUT_PATH = 'data/raw/data_profile.txt'
 
 def acquire_data():
